@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="scan"
+            type="com.lux.zena.barcodescanner.ui.activity.BarcodeScanActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.BarcodeScanActivity">
+
+        <!--   barcode scanner   -->
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/zxing_barcode_scanner"
+            android:layout_marginTop="20dp"
+            android:layout_width="225dp"
+            android:layout_height="225dp"
+            android:layout_centerInParent="true"
+            app:zxing_scanner_layout ="@layout/view_barcode_scanner"/>
+        <Button
+            android:id="@+id/btn_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flash"
+            android:backgroundTint="@color/black"
+            android:layout_below="@id/zxing_barcode_scanner"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</layout>
